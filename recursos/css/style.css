@@ -1,0 +1,130 @@
+/* Reset básico */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+}
+
+/* Cabeçalho */
+header {
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo do botão */
+button {
+    background-color: #ff0000;
+    color: #fff;
+    border: 2px solid #ffdf00;
+    padding: 15px 30px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Efeito de hover no botão */
+button:hover {
+    background-color: #ffdf00;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Contêiner do jogo */
+.game-container {
+    position: relative;
+    margin-top: 40px;
+    padding: 20px;
+    border: 4px solid #ffdf00; /* Borda amarela ao redor do jogo */
+    border-radius: 12px; /* Bordas arredondadas */
+    background: linear-gradient(45deg, #ff6347, #ffb6c1); /* Gradiente de fundo */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2); /* Sombra suave */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 1s ease; /* Transição suave para mudar o fundo do jogo */
+}
+
+/* Iframe do jogo */
+#game-iframe {
+    border: none;
+    display: block;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+/* Estilo do botão de mudar fundo */
+#change-bg-btn {
+    background-color: #ff0000;
+    color: #fff;
+    border: 2px solid #ffdf00;
+    padding: 15px 20px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 50%; /* Tornando o botão redondo */
+    position: absolute; /* Para posicioná-lo de forma livre */
+    top: 20px; /* Distância do topo do container */
+    right: 20px; /* Distância do lado direito do container */
+    transition: all 0.3s ease;
+}
+
+/* Efeito de hover no botão de mudar fundo */
+#change-bg-btn:hover {
+    background-color: #ffdf00;
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* Seções */
+section {
+    margin-bottom: 40px;
+}
+
+section h2, h1 {
+    font-size: 2rem;
+    color: #ffdf00;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #00ff00;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
