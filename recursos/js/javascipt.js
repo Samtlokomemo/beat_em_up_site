@@ -1,16 +1,16 @@
-// Acessa os botões e o iframe
-const playButton = document.getElementById('play-btn');
-const gameIframe = document.getElementById('game-iframe');
-const changeBgButton = document.getElementById('change-bg-btn');
-
-// Adiciona o evento de clique no botão de "Play"
-playButton.addEventListener('click', function() {
-    // Esconde o botão "Play"
-    playButton.style.display = 'none';
+document.getElementById('play-btn').addEventListener('click', function() {
+    // Define o src do iframe quando o botão Play for clicado
+    var iframe = document.getElementById('game-iframe');
+    iframe.src = 'recursos/jogo/index.html';  // Caminho do seu jogo
     
-    // Exibe o iframe do jogo
-    gameIframe.style.display = 'block';
+    // Mostra o iframe e o botão de mudar fundo
+    iframe.style.display = 'block';
+    document.getElementById('change-bg-btn').style.display = 'block';
 
-    // Exibe o botão de mudar fundo
-    changeBgButton.style.display = 'block';
+
+    
+    // Oculta o botão de Play
+    this.style.display = 'none';
+    
+    document.getElementById('container-game').classList.add('game-container');
 });

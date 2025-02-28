@@ -7,6 +7,9 @@
 
 /* Estilo geral do corpo */
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #000;
     color: #fff;
     font-family: 'Press Start 2P', cursive, sans-serif;
@@ -85,28 +88,47 @@ button:hover {
     z-index: 0;
 }
 
-/* Estilo do botão de mudar fundo */
-#change-bg-btn {
+/* Animação de balanço suave contínuo */
+@keyframes balanço-continuo {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Estilo do botão */
+button {
     background-color: #ff0000;
     color: #fff;
     border: 2px solid #ffdf00;
-    padding: 15px 20px;
+    padding: 15px 30px;
     font-family: 'Press Start 2P', cursive;
-    font-size: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    border-radius: 50%; /* Tornando o botão redondo */
-    position: absolute; /* Para posicioná-lo de forma livre */
-    top: 20px; /* Distância do topo do container */
-    right: 20px; /* Distância do lado direito do container */
     transition: all 0.3s ease;
+    border-radius: 8px;
+    margin-top: 20px;
 }
 
-/* Efeito de hover no botão de mudar fundo */
-#change-bg-btn:hover {
+/* Efeito de hover com balanço contínuo */
+button:hover {
     background-color: #ffdf00;
     color: #000;
-    transform: scale(1.1);
+    transform: scale(1.05);
+    animation: balanço-continuo 2s infinite ease-in-out; /* Aplica a animação contínua enquanto o cursor estiver em cima */
 }
+
 
 /* Seções */
 section {
