@@ -1,4 +1,4 @@
-/* Reset básico */ 
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -9,26 +9,20 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow: auto;
     background-color: #000;
     color: #fff;
     font-family: 'Press Start 2P', cursive, sans-serif;
     line-height: 1.6;
     text-align: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: auto;
 }
 
 /* Cabeçalho */
 header {
-    position: relative;
-    z-index: 1;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin: 20px 0 40px;
     width: 100%;
     padding: 20px 0;
 }
@@ -52,16 +46,16 @@ button {
     font-family: 'Press Start 2P', cursive;
     font-size: 1.5rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
     border-radius: 8px;
     margin-top: 20px;
 }
 
-/* Efeito de hover no botão */
 button:hover {
     background-color: #ffdf00;
     color: #000;
     transform: scale(1.05);
+    animation: balanço-continuo 2s infinite ease-in-out;
 }
 
 /* Contêiner do jogo */
@@ -69,15 +63,15 @@ button:hover {
     position: relative;
     margin-top: 40px;
     padding: 20px;
-    border: 4px solid #ffdf00; /* Borda amarela ao redor do jogo */
-    border-radius: 12px; /* Bordas arredondadas */
-    background: linear-gradient(45deg, #ff6347, #ffb6c1); /* Gradiente de fundo */
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2); /* Sombra suave */
+    border: 4px solid #ffdf00;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #ff6347, #ffb6c1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background 1s ease; /* Transição suave para mudar o fundo do jogo */
+    transition: background 1s ease;
 }
 
 /* Iframe do jogo */
@@ -85,57 +79,21 @@ button:hover {
     border: none;
     display: block;
     margin: 0 auto;
-    z-index: 0;
 }
 
-/* Animação de balanço suave contínuo */
+/* Animação de balanço contínuo */
 @keyframes balanço-continuo {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(-5deg);
-    }
-    50% {
-        transform: rotate(5deg);
-    }
-    75% {
-        transform: rotate(-5deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+    0%, 100% { transform: rotate(0deg); }
+    25%, 75% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
 }
-
-/* Estilo do botão */
-button {
-    background-color: #ff0000;
-    color: #fff;
-    border: 2px solid #ffdf00;
-    padding: 15px 30px;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-/* Efeito de hover com balanço contínuo */
-button:hover {
-    background-color: #ffdf00;
-    color: #000;
-    transform: scale(1.05);
-    animation: balanço-continuo 2s infinite ease-in-out; /* Aplica a animação contínua enquanto o cursor estiver em cima */
-}
-
 
 /* Seções */
 section {
     margin-bottom: 40px;
 }
 
-section h2, h1 {
+section h1, section h2 {
     font-size: 2rem;
     color: #ffdf00;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
@@ -144,7 +102,6 @@ section h2, h1 {
 
 /* Rodapé */
 footer {
-    text-align: center;
     margin-top: 40px;
     font-size: 1rem;
     color: #00ff00;
