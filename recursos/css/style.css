@@ -13,11 +13,17 @@ body {
     justify-content: flex-start;
     height: 100vh;
     overflow: auto;
-    background-color: #000;
+    background-color: #112;
     color: #fff;
     font-family: 'Press Start 2P', cursive, sans-serif;
     line-height: 1.6;
     text-align: center;
+    animation: piscar-fundo 5s infinite alternate; /* Animação de fundo piscando */
+}
+
+@keyframes piscar-fundo {
+    0% { background-color: #111; }
+    100% { background-color: #112; } /* Um tom ligeiramente mais claro de preto */
 }
 
 /* Cabeçalho */
@@ -99,6 +105,10 @@ button:active {
     50% { transform: rotate(5deg); }
 }
 
+.intro {
+    text-align: center;
+}
+
 /* Seções */
 section {
     margin-bottom: 40px;
@@ -117,6 +127,12 @@ section h1:hover, section h2:hover {
     transform: translateY(-3px);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8),
                  0 0 8px rgba(255, 223, 0, 0.6);
+    animation: piscar-texto 0.2s infinite alternate; /* Nova animação ao passar o mouse */
+}
+
+@keyframes piscar-texto {
+    from { opacity: 1; }
+    to { opacity: 0.2; }
 }
 
 section h1:active, section h2:active {
@@ -131,4 +147,12 @@ footer {
     font-size: 1rem;
     color: #00ff00;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    animation: mudar-cor-footer 3s infinite alternate; /* Nova animação para o footer */
+}
+
+@keyframes mudar-cor-footer {
+    0% { color: #00ff00; }       /* Verde inicial */
+    33% { color: #ff00ff; }      /* Magenta */
+    66% { color: #00ffff; }      /* Ciano */
+    100% { color: #ffff00; }     /* Amarelo */
 }
